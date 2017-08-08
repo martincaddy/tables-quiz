@@ -37,8 +37,13 @@ for n in range (10):
 # Converting integer to string to ask the question
     num1 = str(nums1)
     num2 = str(nums2)
-    attempt = input("What is " + num1 + " multiplied by "  +num2 +": ")
+    
+    if num1 == 5:
+        five()
+        flash()
 
+    attempt = input("What is " + num1 + " multiplied by "  +num2 +": ")
+    
 # Converting string back to integer to calculate answer
     x = int(num1)
     y = int(num2)
