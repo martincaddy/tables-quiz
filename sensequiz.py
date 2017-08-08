@@ -11,7 +11,7 @@ sense = SenseHat()
 # Set up the score variable
 count = 0
 #Main game loop
-for n in range (10):
+for n in range (3):
 
 #Setting up lists of numbers
     nums1 = randrange(12)
@@ -36,8 +36,10 @@ for n in range (10):
         
     else:
         print("Bad luck!!")
+        sense.show_message("Bad Luck!")
         
 # Displaying the final score and lights
 score = str(count)
 print("You scored:"  +score)
+sense.show_message(score)
 count = int(score)
