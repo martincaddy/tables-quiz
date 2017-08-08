@@ -9,6 +9,7 @@ from numbers import *
 
 unicornhat.rotation(270)
 
+# creating functions to show and flash images on unicornhat
 def blank():
     unicornhat.clear()
     unicornhat.show()
@@ -45,12 +46,6 @@ for n in range (6):
             flash()
             
         blank()
-        #for a in range(5):
-##            piglow.auto_update = True
-##            piglow.all(150)
-##            sleep(0.1)
-##            piglow.all(0)
-##            sleep(0.1)
 
     else:
         print("Bad luck!!")
@@ -59,41 +54,37 @@ for n in range (6):
             flash()
             
         blank()
-# Keeping score with piglow LEDs
+# Keeping score with unicornhat
 
-##    if count == 1:
-##        piglow.auto_update = True
-##        piglow.white(200)
-##
-##    elif count == 2:
-##        piglow.auto_update = True
-##        piglow.white(200)
-##        piglow.blue(200)
-##
-##    elif count == 3:
-##        piglow.auto_update = True
-##        piglow.white(200)
-##        piglow.blue(200)
-##        piglow.green(200)
-##
-##    elif count == 4:
-##        piglow.auto_update = True
-##        piglow.white(200)
-##        piglow.blue(200)
-##        piglow.green(200)
-##        piglow.yellow(200)
-##
-##    elif count == 5:
-##        piglow.auto_update = True
-##        piglow.white(200)
-##        piglow.blue(200)
-##        piglow.green(200)
-##        piglow.yellow(200)
-##        piglow.orange(200)
-##
-##    elif count == 6:
-##        piglow.auto_update = True
-##        piglow.all(200)
+    if count == 1:
+        one()
+        sleep(1)
+        blank()
+
+    elif count == 2:
+        two()
+        sleep(1)
+        blank()
+
+    elif count == 3:
+        three()
+        sleep(1)
+        blank()
+
+    elif count == 4:
+        four()
+        sleep(1)
+        blank()
+
+    elif count == 5:
+        five()
+        sleep(1)
+        blank()
+
+    elif count == 6:
+        six()
+        sleep(1)
+        blank()
 ##        
 
 # Displaying the final score and lights
