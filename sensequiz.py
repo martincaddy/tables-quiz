@@ -20,6 +20,7 @@ for n in range (3):
 # Converting integer to string to ask the question
     num1 = str(nums1)
     num2 = str(nums2)
+    sense.show_message(num1+' x '+num2)
     attempt = input("What is " + num1 + " multiplied by "  +num2 +": ")
     #sense.show_message((nums1)(num2s))
 
