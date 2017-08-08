@@ -29,6 +29,17 @@ g,g,b,b,b,b,b,b,
 b,b,b,b,b,b,b,b,
 ]
 
+cross = [
+r,r,b,b,b,b,r,r,
+b,r,r,b,b,r,r,b,
+b,b,r,r,r,r,b,b,
+b,b,b,r,r,b,b,b,
+b,b,r,r,r,r,b,b,
+b,r,r,b,b,r,r,b,
+r,r,b,b,b,b,r,r,
+b,b,b,b,b,b,b,b,
+]
+
 # Set up the score variable
 count = 0
 #Main game loop
@@ -59,7 +70,8 @@ for n in range (3):
         
     else:
         print("Bad luck!!")
-        sense.show_message("Bad Luck!")
+        sense.set_pixels(cross)
+        sleep(1)
         
 # Displaying the final score and lights
 score = str(count)
