@@ -13,6 +13,12 @@ unicornhat.rotation(270)
 def blank():
     unicornhat.clear()
     unicornhat.show()
+
+def blink():
+    sleep(0.1)
+    unicornhat.clear()
+    unicornhat.show()
+    sleep(0.1)
     
 def flash():
     sleep(0.2)
@@ -55,8 +61,12 @@ for n in range (6):
             
         blank()
 # Keeping score with unicornhat
+    if count == 0:
+        zero()
+        sleep(1)
+        blank()
 
-    if count == 1:
+    elif count == 1:
         one()
         sleep(1)
         blank()
@@ -92,30 +102,37 @@ score = str(count)
 print("You scored:"  +score)
 count = int(score)
 
-##if count >= 6:
-##    for n in range (10):
-##        piglow.auto_update = True
-##        piglow.all(200)
-##        sleep(0.1)
-##        piglow.all(0)
-##        sleep(0.1)
-##
-##elif count >= 4:
-##    for n in range (5):
-##        piglow.auto_update = True
-##        piglow.white(100)
-##        piglow.blue(100)
-##        piglow.green(100)
-##        sleep(0.1)
-##        piglow.all(0)
-##        sleep(0.1)
-##
-##else:
-##    for n in range (3):
-##        piglow.auto_update = True
-##        piglow.white(75)
-##        sleep(1)
-##        piglow.white(0)
-##        sleep(1)
-                
+if count == 6:
+    for n in range (10):
+        six()
+        blink()
 
+elif count == 5:
+    for n in range (10):
+        five()
+        blink()
+
+elif count == 4:
+    for n in range (10):
+        four()
+        blink()
+        
+elif count == 3:
+    for n in range (10):
+        three()
+        blink()
+        
+elif count == 2:
+    for n in range (10):
+        two()
+        blink()
+        
+elif count == 1:
+    for n in range (10):
+        one()
+        blink()
+        
+elif count == 0:
+    for n in range (10):
+        zero()
+        blink()
