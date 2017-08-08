@@ -4,7 +4,20 @@
 
 from random import randrange
 from time import sleep
-#import piglow
+import unicornhat
+from numbers import *
+
+unicornhat.rotation(270)
+
+def blank():
+    unicornhat.clear()
+    unicornhat.show()
+    
+def flash():
+    sleep(0.2)
+    blank()
+    sleep(0.2)
+
 # Set up the score variable
 count = 0
 #Main game loop
@@ -27,6 +40,11 @@ for n in range (6):
     if z == x * y:
         print("Well Done!!")
         count = count+1
+        for i in range (3):
+            tick()
+            flash()
+            
+        blank()
         #for a in range(5):
 ##            piglow.auto_update = True
 ##            piglow.all(150)
@@ -36,7 +54,11 @@ for n in range (6):
 
     else:
         print("Bad luck!!")
-        
+        for i in range (3):
+            cross()
+            flash()
+            
+        blank()
 # Keeping score with piglow LEDs
 
 ##    if count == 1:
