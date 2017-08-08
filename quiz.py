@@ -102,7 +102,27 @@ score = str(count)
 print("You scored:"  +score)
 count = int(score)
 
-if count == 6:
+if count == 10:
+    for n in range (10):
+        ten()
+        blink()
+        
+elif count == 9:
+    for n in range (10):
+        nine()
+        blink()
+        
+elif count == 8:
+    for n in range (10):
+        eight()
+        blink()
+        
+elif count == 7:
+    for n in range (10):
+        seven()
+        blink()
+        
+elif count == 6:
     for n in range (10):
         six()
         blink()
