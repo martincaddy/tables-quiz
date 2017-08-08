@@ -28,7 +28,7 @@ def flash():
 # Set up the score variable
 count = 0
 #Main game loop
-for n in range (6):
+for n in range (10):
 
 #Setting up lists of numbers
     nums1 = randrange(10)
@@ -95,6 +95,27 @@ for n in range (6):
         six()
         sleep(1)
         blank()
+        
+    elif count == 7:
+        seven()
+        sleep(1)
+        blank()
+        
+    elif count == 8:
+        eight()
+        sleep(1)
+        blank()
+        
+    elif count == 9:
+        nine()
+        sleep(1)
+        blank()
+        
+    elif count == 10:
+        ten()
+        sleep(1)
+        blank()
+        
 ##        
 
 # Displaying the final score and lights
