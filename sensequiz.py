@@ -52,7 +52,7 @@ for n in range (3):
 # Converting integer to string to ask the question
     num1 = str(nums1)
     num2 = str(nums2)
-    sense.show_message(num1+' x '+num2)
+    sense.show_message(num1+' x '+num2, text_colour=r, back_colour=b)
     attempt = input("What is " + num1 + " multiplied by "  +num2 +": ")
     #sense.show_message((nums1)(num2s))
 
@@ -76,5 +76,5 @@ for n in range (3):
 # Displaying the final score and lights
 score = str(count)
 print("You scored:"  +score)
-sense.show_message(score)
+sense.show_message("You scored: "+score+ " out of 10", text_colour=r, back_colour=b)
 count = int(score)
